@@ -33,8 +33,10 @@ def get_intelligence(name):
 
 if __name__ == '__main__':
     heroes = ['Hulk', 'Captain_America', 'Thanos']
+
     h = {}
     for hero in heroes:
+        get_data(hero)
         h.update({get_intelligence(hero)[0]: get_intelligence(hero)[1]})
         s = sorted(h.items(), key=lambda item: item[1])
     print(f'Самый умный {s[0][0]}, у него {s[0][1]} intelligence')
